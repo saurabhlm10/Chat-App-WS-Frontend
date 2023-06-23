@@ -24,7 +24,8 @@ const Chat = () => {
   }, []);
 
   const connectToWs = () => {
-    const ws = new WebSocket("wss://saurabh-ws-chat-app.cyclic.app/");
+    // const ws = new WebSocket("wss://saurabh-ws-chat-app.cyclic.app");
+    const ws = new WebSocket("ws://http:localhost:4040");
     setWs(ws);
     ws.addEventListener("message", handleMessage);
     ws.addEventListener("close", () => {
